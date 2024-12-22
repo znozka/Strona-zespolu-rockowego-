@@ -1,3 +1,4 @@
+
 <!DOCTYPE html> 
 <html>
 <head>
@@ -9,7 +10,9 @@
 
 </head>
 <body>
+<!--MENU-->
 	<nav id= "menu">
+<!--LOGO--> <a id="logo"> <img src="suns.jpg" style="width:200px;"> </a>
 		<a id="Wysun">O NAS</a>
 		<a href="#">WYDARZENIA</a>
 		<a href="#">ALBUMY</a>
@@ -41,8 +44,55 @@
         });
     });
 </script>
-
+<!--SLAJDY-->
+	<nav id="slides">
+		<a id="logo"> <img src="swistak.jpg" style="width:100%;"> </a>
+		<a id="logo"> <img src="swistaaak.jpg" style="width:100%;"> </a>
+		<a id="logo"> <img src="swistaaaaak.jpg" style="width:100%;"> </a>
+	</nav>
 	
+<script>
+$(document).ready(function() {
+    let slides = $("#slides a");
+    let currentIndex = 1;
+
+    slides.hide();
+    slides.eq(currentIndex).show();
+
+    function showNextSlide() {
+        slides.eq(currentIndex).fadeOut(500, function() {
+            currentIndex = (currentIndex + 1) % slides.length;
+            slides.eq(currentIndex).fadeIn(500);
+        });
+    }
+    setInterval(showNextSlide, 2000);
+});
+</script>
+<!-- Aktualności -->
+    
+<div class="content">
+        <div class="column1">
+            <h2>Lorem Ipsum</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+			Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+			in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
+			sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+        </div>
+        <div class="column2">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
+			labore et dolore magna aliqua. 
+			Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+			in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
+			sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		</div>
+ </div>
+ <!--STOPKA-->
+ <footer class="footer">
+	<div class="footer-line"></div>
+		&copy 2024 NazwaZespołu
+ </footer>
+
 
 </body>
 </html>
