@@ -41,21 +41,21 @@ border-color: #000;
     text-decoration: none;	
 }
 /*LOGO*/
-#menu a:nth-child(1){
-	height: 60px;
-	line-height: 60px;
-	padding-right: 100px;
-	
-	
+#logo {
+	margin-top: 10px;
+	margin-left:10px;
+	position: absolute;
+	z-index: 10;
 }
-#menu a:nth-child(2), #menu a:nth-child(3), #menu a:nth-child(6), #menu a:nth-child(4), #menu a:nth-child(5){
+
+#menu a:nth-child(1), #menu a:nth-child(2), #menu a:nth-child(3), #menu a:nth-child(4), #menu a:nth-child(5){
 	width: 150px;
 	height: 60px;
 	line-height: 60px;
 	border-right-style: solid;
 }
 
-#menu a:nth-child(7){
+#menu a:nth-child(6){
 	width: 120px;
 	margin-right: 20px;
 }
@@ -109,7 +109,9 @@ border-color: #000;
 	padding-bottom: 20px;
     position: relative;
 	background-color: #404040;
+	height: 100px;
 }
+
 .footer-line {
     width: 100%; /*Szerokość linii */
     height: 2px;
