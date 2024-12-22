@@ -1,29 +1,34 @@
 body {
 	font-size: 12px;
 	font-family: serif;
+	background-color: #cfcfcf;
 }
 
 #menu{
-text-align: center;
+text-align: right;
 background-color: #404040;
+border-style: solid;
+border-color: #000;
 }
 #mini {
 	width: 200px;
 	text-align: center;
 	background-color: #404040;
-	margin-left: 100px;
+	margin-left: 300px;
+	position: absolute;
+	z-index: 10;
 }
 #menu a{
 	line-height: 25px;
-	height: 100%;
-	font-size: 14px;
+	font-size: 17px;
 	display: inline-block;
 	margin-top: 10px;
 	margin-bottom: 10px;
 	text-align: center;
 	cursor: pointer;
 	color: #fff;
-    text-decoration: none;	
+    text-decoration: none;		
+	
 }
 #mini a{
 	line-height: 25px;
@@ -35,23 +40,79 @@ background-color: #404040;
 	color: #fff;
     text-decoration: none;	
 }
-#menu a:nth-child(1), #menu a:nth-child(3), #menu a:nth-child(2), #menu a:nth-child(4), #menu a:nth-child(5){
-	width: 130px;
+/*LOGO*/
+#menu a:nth-child(1){
 	height: 60px;
 	line-height: 60px;
-	border-right-style: groove;
+	padding-right: 100px;
+	
+	
 }
-#menu a:nth-child(6){
-	width: 130px;
+#menu a:nth-child(2), #menu a:nth-child(3), #menu a:nth-child(6), #menu a:nth-child(4), #menu a:nth-child(5){
+	width: 150px;
+	height: 60px;
+	line-height: 60px;
+	border-right-style: solid;
+}
+
+#menu a:nth-child(7){
+	width: 120px;
+	margin-right: 20px;
+}
+
+#menu a:hover {
+    background-color: rgba(64, 64, 64, 0.5);
+	color: rgb(191, 191, 191);
 }
 #mini a:nth-child(1), #mini a:nth-child(2){
 	width: 200px;
 	height: 30px;
 	line-height: 30px;
-	border-bottom-style: groove;
+	border-bottom-style: solid;
 }
 #mini a:nth-child(3){
 	width: 200px;
 	height: 30px;
 	line-height: 30px;
+}
+#mini a:hover {
+    background-color: rgba(64, 64, 64, 0.5);
+	color: rgb(191, 191, 191);
+}
+.content {
+    display: flex;
+    padding: 20px;
+    gap: 20px;
+}
+.column1 {
+    flex: 3; 
+	height: 200px;
+    padding: 10px;
+	border: 2px solid #000;
+    background-color: #404040;
+    color: #fff;
+}
+.column2 {
+    flex: 3; 
+	height: 200px;
+    border: 2px solid #000;
+    padding: 10px;
+    background-color: #404040;
+    color: #fff;
+}
+
+.footer {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #fff;
+    margin-top: 20px;
+	padding-bottom: 20px;
+    position: relative;
+	background-color: #404040;
+}
+.footer-line {
+    width: 100%; /*Szerokość linii */
+    height: 2px;
+    background-color: #000;
+    margin: 0 auto 10px auto; /*Wycentrowanie i margines dolny */
 }
