@@ -1,0 +1,44 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<script src="jquery-3.7.1.min.js"></script>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="TI_etap3.css">
+<link rel="stylesheet" type="text/css" href="TI_etpa3.js">
+<title>Strona Zespołu Rockowego</title>
+
+</head>
+<body>
+	<nav id= "menu">
+		<a id="Wysun">O NAS</a>
+		<a href="#">WYDARZENIA</a>
+		<a href="#">ALBUMY</a>
+		<a href="#">SKLEP</a>
+		<a href="#">KONTAKT</a>
+		<a href="#">BILETY</a>
+	</nav>
+	<nav id="mini" style="display:none;">
+		<a href="#">HISTORIA ZESPOŁU</a>
+		<a href="#">EKIPA</a>
+		<a href="#">GALERIA</a>
+	</nav>
+
+<script>
+    $(document).ready(function() {
+        $("#menu a:contains('O NAS')").on('click', function(event) {
+            event.preventDefault(); 
+            $('#mini').slideToggle(300, function() { 
+                if ($('#mini').is(':visible')) {
+                    $("#menu a:contains('O NAS')").text('O NAS'); 
+                } else {
+                    $("#menu a:contains('O NAS')").text('O NAS'); 
+                }
+            });
+        });
+    });
+</script>
+
+	
+
+</body>
+</html>
