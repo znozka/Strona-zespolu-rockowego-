@@ -11,7 +11,7 @@
     <header id="header">
         <!--LOGO--> 
         <nav id="logo">
-            <a href="index.html"><img src="img/suns.jpg" alt="Logo zespołu"></a>
+            <a href="img/index.html"><img src="img/suns.jpg" alt="Logo zespołu"></a>
         </nav>
         
         <!--MENU-->
@@ -31,11 +31,21 @@
         <a href="#">GALERIA</a>
     </nav>
 
-    <!--SLAJDY-->
+    <!-- SLAJDY -->
     <nav id="slides"> <!--na przyszlosc: moze zrobimy z tego linki do danej aktualnosci? -->
         <a id="slide"><img src="img/swistak.jpg" style="width:100%;"></a>
 		<a id="slide"><img src="img/swistaaak.jpg" style="width:100%;"></a>
 		<a id="slide"><img src="img/swistaaaaak.jpg" style="width:100%;"></a>
+		
+		<!-- Strzałki -->
+		<button id="prev">&#10094;</button>
+		<button id="next">&#10095;</button>
+		<!-- Kropeczki -->
+		<div id="dots">
+			<span class="dot"></span>
+			<span class="dot"></span>
+			<span class="dot"></span>
+		</div>
     </nav>
 
     <!-- Aktualności -->
@@ -79,21 +89,92 @@
                 }, 300); // Czas opóźnienia (300 ms)
             });
 
-            let slides = $("#slides a");
-            let currentIndex = 1;
+			// SLAJDY, STRZAŁKI, KROPECZKI
+			let slides = $("#slides a");
+			let dots = $("#dots .dot");
+			let currentIndex = 1;
 
-            slides.hide();
-            slides.eq(currentIndex).show();
+			slides.hide();
+			slides.eq(currentIndex).show();
+			dots.eq(currentIndex).addClass("active");
+	
+			function showNextSlide() {
+				slides.eq(currentIndex).fadeOut(500, function() {
+				currentIndex = (currentIndex + 1) % slides.length;
+				slides.eq(currentIndex).fadeIn(500);
+				updateDots();
+			});
+			}
+	
+			function showPrevSlide() {
+				slides.eq(currentIndex).fadeOut(500, function() {
+				currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+				slides.eq(currentIndex).fadeIn(500);
+				updateDots();
+			});
+			}
+			function updateDots() {
+				dots.removeClass("active"); // Usuń klasę aktywną ze wszystkich kropeczek
+				dots.eq(currentIndex).addClass("active"); // Dodaj klasę aktywną do bieżącej kropeczki
+			}
+			function startAutoSlide() {
+				interval = setInterval(showNextSlide, 2000);
+			}
 
-            function showNextSlide() {
-                slides.eq(currentIndex).fadeOut(500, function() {
-                    currentIndex = (currentIndex + 1) % slides.length;
-                    slides.eq(currentIndex).fadeIn(500);
+			function stopAutoSlide() {
+				clearInterval(interval);
+			}
+	
+			function showNextSlideOnClick() {
+				slides.eq(currentIndex).fadeOut(200, function() {
+				currentIndex = (currentIndex + 1) % slides.length;
+				slides.eq(currentIndex).fadeIn(200);
+			});
+			}
+			function showPrevSlideOnClick() {
+				slides.eq(currentIndex).fadeOut(200, function() {
+				currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+				slides.eq(currentIndex).fadeIn(200);
+			});
+			}
+	    
+			// Obsługa kropeczek
+			dots.click(function() {
+				stopAutoSlide();
+				currentIndex = $(this).index(); // Ustaw indeks na klikniętą kropeczkę
+				slides.fadeOut(500);
+				slides.eq(currentIndex).fadeIn(500); // Pokaż slajd odpowiadający klikniętej kropeczce
+				updateDots(); // Zaktualizuj aktywną kropeczkę
+				startAutoSlide();
+			}); 
+	
+			$("#next").click(function () {
+				stopAutoSlide();
+				showNextSlideOnClick();
+				updateDots();
+				startAutoSlide();
+			});
+
+			$("#prev").click(function () {
+				stopAutoSlide();
+				showPrevSlideOnClick();
+				updateDots();
+				startAutoSlide();
+			});
+	
+			interval = setInterval(showNextSlide, 2000);
+
+			$(document).ready(function() {
+				let strzalki = $("#prev, #next");
+				strzalki.hide();
+                $("#slides").mouseenter(function() {
+                    $("#prev, #next").fadeIn();
                 });
-            }
-            setInterval(showNextSlide, 3000);
-        });
+                $("#slides").mouseleave(function() {
+                    $("#prev, #next").fadeOut();
+                });
+			});
+		});
     </script>
-
 </body>
 </html>
