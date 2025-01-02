@@ -2,16 +2,17 @@
 <html lang="pl">
 <head>
     <meta charset="utf-8">
+	<title>Ironwill</title>
+	<link rel="shortcut icon" href="img/ikona.png">
     <script src="jquery-3.7.1.min.js"></script>
     <link rel="stylesheet" href="index.css">
-    <title>Strona Zespołu Rockowego</title>
     <script defer src="index.js"></script>
 </head>
 <body>
     <header id="header">
         <!--LOGO--> 
         <nav id="logo">
-            <a href="img/index.html"><img src="img/suns.jpg" alt="Logo zespołu"></a>
+            <a href="index.html"><img src="img/logo43.png" alt="Logo zespołu"></a>
         </nav>
         
         <!--MENU-->
@@ -27,14 +28,14 @@
 
     <nav id="mini">
         <a href="#">HISTORIA ZESPOŁU</a>
-        <a href="#">EKIPA</a>
+        <a href="ekipa.html">EKIPA</a>
         <a href="#">GALERIA</a>
     </nav>
 
     <!-- SLAJDY -->
-    <nav id="slides"> <!--na przyszlosc: moze zrobimy z tego linki do danej aktualnosci? -->
-        <a id="slide"><img src="img/swistak.jpg" style="width:100%;"></a>
-		<a id="slide"><img src="img/swistaaak.jpg" style="width:100%;"></a>
+    <nav id="slides">
+        <a id="slide"><img src="img/koncert_tlo1.jpg" style="width:100%;"></a>
+		<a id="slide"><img src="img/koncert_tlo2.jpg" style="width:100%;"></a>
 		<a id="slide"><img src="img/swistaaaaak.jpg" style="width:100%;"></a>
 		
 		<!-- Strzałki -->
@@ -49,6 +50,7 @@
     </nav>
 
     <!-- Aktualności -->
+	<h1>Aktualności</h1>
     <div class="content">
         <div class="column">
             <h2>Lorem Ipsum</h2>
@@ -69,7 +71,7 @@
 
     <footer class="footer">
         <div class="footer-line"></div>
-            &copy 2024 NazwaZespołu
+            &copy 2024 Irownwill
     </footer>
 
     <script>
@@ -99,17 +101,17 @@
 			dots.eq(currentIndex).addClass("active");
 	
 			function showNextSlide() {
-				slides.eq(currentIndex).fadeOut(500, function() {
+				slides.eq(currentIndex).fadeOut(400, function() {
 				currentIndex = (currentIndex + 1) % slides.length;
-				slides.eq(currentIndex).fadeIn(500);
+				slides.eq(currentIndex).fadeIn(400);
 				updateDots();
 			});
 			}
 	
 			function showPrevSlide() {
-				slides.eq(currentIndex).fadeOut(500, function() {
+				slides.eq(currentIndex).fadeOut(400, function() {
 				currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-				slides.eq(currentIndex).fadeIn(500);
+				slides.eq(currentIndex).fadeIn(400);
 				updateDots();
 			});
 			}
@@ -118,7 +120,7 @@
 				dots.eq(currentIndex).addClass("active"); // Dodaj klasę aktywną do bieżącej kropeczki
 			}
 			function startAutoSlide() {
-				interval = setInterval(showNextSlide, 2000);
+				interval = setInterval(showNextSlide, 3000);
 			}
 
 			function stopAutoSlide() {

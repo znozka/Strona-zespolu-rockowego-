@@ -1,11 +1,9 @@
 body {
 	margin: 0;
 	padding: 0;
-	font-size: 12px;
-	/*font-size: 3.2vw;*/
+	font-size: 1vw;
 	font-family: verdana;
-	/*background-color: #cfcfcf;*/
-	background-color: #000; /*co ty za zmianą na czarny żeby było minimalistyczniej?*/
+	background-color: #000;
 }
 
 #header {
@@ -13,10 +11,15 @@ body {
     align-items: center;
     justify-content: space-between;
     background-color: #404040;
-    /*padding: 10px 40px 10px 20px;*/
 	padding: 1vw 4vw 0.7vw 2vw;
-    /*border-bottom: 2px solid #000;*/
-	border-bottom: 0.4vw solid #000;
+	border-bottom: 0.25vw solid #000;
+}
+
+h1 {
+	color: #fff;
+	font-size: 2vw;
+	padding: 0 2vw;
+	letter-spacing: 0.1vw;
 }
 
 #logo {
@@ -24,10 +27,10 @@ body {
     top: 0;
     left: 0;
     z-index: 1;
-    padding: 1.5vw 2vw; 
+    padding: 1.2vw 2vw; 
 }
 #logo img {
-	height: 8vw;
+	height: 9vw;
 }
 
 #menu {
@@ -38,46 +41,42 @@ body {
 #menu a {
 	display: inline-block;
 	text-decoration: none;
-	/*margin: 0 10px;*/
 	margin: 0 0.5vw;
-	/*line-height: 20px;*/
-	line-height: 3vw;
+	line-height: 2vw;
 	text-align: center;
 	cursor: pointer;
 	color: #fff;
-	/*font-size: 17px;*/
 	font-size: 1.2vw;
 	transition: background-color 0.3s, color 0.3s;	
 }
 #menu a:nth-child(1), #menu a:nth-child(2), #menu a:nth-child(3), #menu a:nth-child(4), #menu a:nth-child(5){
 	border-right-style: solid;
-	/*padding-right: 30px;*/
 	padding-right: 3vw;
 }
 #menu a:hover {
     background-color: rgba(64, 64, 64, 0.5);
 	color: rgb(191, 191, 191);
+	position: relative;
 }
 
 #mini {
 	position: absolute;
 	display: none;
-	z-index: 10;
-	width: 200px;
+	z-index: 1;
+	width: 18vw;
 	text-align: center;
 	background-color: #404040;
-	left: 600px; /*to trzeba jakoś zmienić tak, żeby ono się wyświetlało pod "o nas" a nie w konkretnym ustalonym miejscu*/
+	left: 400px; /*to trzeba jakoś zmienić tak, żeby ono się wyświetlało pod "o nas" a nie w konkretnym ustalonym miejscu*/
 }
 #mini a {
 	display: block;
 	text-decoration: none;	
 	color: #fff;
-	line-height: 25px;
-	font-size: 10px;
-	margin-bottom: 1px;
+	line-height: 2.5vw;
+	font-size: 1vw;
 	text-align: center;
 	cursor: pointer;
-	border-bottom: 1px solid #000;
+	border-bottom: 0.2vw solid #000;
 	transition: background-color 0.3s, color 0.3s;
 }
 #mini a:hover {
@@ -123,16 +122,16 @@ body {
 /* Style dla kropeczek */
 #dots {
     position: absolute;
-    top: 90%;             /* COŚ JEST NIE TAK ALE NIE WIEM JAK NAPRAWIĆ kropeczki chciałam żeby byly na dole zdjęć a są na środku (?) */
+    top: 82%;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
     justify-content: center;
-    gap: 10px;
+    gap: 0.8vw;
 }
 .dot {
-    width: 10px;
-    height: 10px;
+    width: 0.8vw;
+    height: 0.8vw;
     border-radius: 50%;
     background-color: rgba(255, 0, 0, 0.5); /* Czerwony, półprzezroczysty */
     cursor: pointer;
@@ -157,10 +156,10 @@ body {
 
 .footer {
     text-align: center;
-    font-size: 12px;
+    font-size: 1vw;
     color: #fff;
-    margin-top: 20px;
-	padding-bottom: 20px;
+    margin-top: 2vw;
+	padding-bottom: 1vw;;
     position: relative;
 	background-color: #404040;
 	height: 50px;
@@ -172,49 +171,50 @@ body {
     margin-bottom: 10px;
 }
 
-/*.column1 {
-    flex: 3; 
-	height: 200px;
-    padding: 10px;
-	border: 2px solid #000;
-    background-color: #404040;
-    color: #fff;
-}
-.column2 {
-    flex: 3; 
-	height: 200px;
-    border: 2px solid #000;
-    padding: 10px;
-    background-color: #404040;
-    color: #fff;
-}
 
-#logo {
-	margin-top: 10px;
-	margin-left:10px;
+/* E K I P A */
+#logo_podstrona {
 	position: absolute;
-	z-index: 10;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    padding: 1.2vw 2vw; 
+}
+#logo_podstrona img {
+	height: 6vw;
 }
 
-#menu a:nth-child(1), #menu a:nth-child(2), #menu a:nth-child(3), #menu a:nth-child(4), #menu a:nth-child(5){
-	width: 150px;
-	height: 60px;
-	line-height: 60px;
-	border-right-style: solid;
+.team-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30vw, 1fr));
+    gap: 1vw;
+    padding: 1rem;
 }
-#menu a:nth-child(6){
-	width: 120px;
-	margin-right: 20px;
+.team-member {
+    background: #404040;
+    border-radius: 0.8vw;
+    box-shadow: 0 0.2vw 0.5vw rgba(0, 0, 0, 0.5);
+    text-align: center;
+    padding: 1vw;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
-
-#mini a:nth-child(1), #mini a:nth-child(2){
-	width: 200px;
-	height: 30px;
-	line-height: 30px;
-	border-bottom-style: solid;
+.team-member:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0.4vw 1vw rgba(0, 0, 0, 0.7);
 }
-#mini a:nth-child(3){
-	width: 200px;
-	height: 30px;
-	line-height: 30px;
-}*/
+.team-member img {
+    max-width: 80%;
+    border-radius: 50%;
+    margin-bottom: 1vw;
+}
+.team-member h3 {
+    margin: 0.5rem 0;
+    color: #d00b0e;
+    font-size: 1.2rem;
+}
+.team-member p {
+    margin: 0;
+    color: #fff;
+    font-size: 0.9vw;
+    line-height: 1.5;
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html> 
+<html lang="pl">
+<head>
+    <meta charset="utf-8">
+	<title>Ironwill</title>
+	<link rel="shortcut icon" href="img/ikona.png">
+    <script src="jquery-3.7.1.min.js"></script>
+    <link rel="stylesheet" href="index.css">
+    <script defer src="index.js"></script>
+</head>
+<body>
+    <header id="header">
+        <!--LOGO--> 
+        <nav id="logo_podstrona">
+            <a href="index.html"><img src="img/logo43.png" alt="Logo zespołu"></a>
+        </nav>
+        
+        <!--MENU-->
+        <nav id="menu">
+            <a id="wysun">O NAS</a>
+            <a href="#">WYDARZENIA</a>
+            <a href="#">ALBUMY</a>
+            <a href="#">SKLEP</a>
+            <a href="#">KONTAKT</a>
+            <a href="#">BILETY</a>
+        </nav>
+    </header>
+
+    <nav id="mini">
+        <a href="#">HISTORIA ZESPOŁU</a>
+        <a href="ekipa.html">EKIPA</a>
+        <a href="#">GALERIA</a>
+    </nav>
+
+    <main>
+        <section class="team-gallery">
+            <div class="team-member">
+                <img src="img/czlonkowie/osoba2.jpg" alt="Zdjęcie gitarzystki Kasi">
+                <h3>Kasia</h3>
+                <p>Kasia to nasza gitarzystka rytmiczna, która dodaje charakteru każdemu utworowi. Jej mocne riffy tworzą solidny fundament zespołu, a jej energia na scenie porywa tłumy. Prywatnie pasjonuje się kolekcjonowaniem winyli.</p>
+            </div>
+            <div class="team-member">
+                <img src="img/czlonkowie/osoba1.jpg" alt="Zdjęcie gitarzysty Jana">
+                <h3>Jan</h3>
+                <p>Jan jest gitarzystą prowadzącym i jednym z głównych wokalistów. Jego solówki są pełne emocji, a głos doskonale pasuje do surowego brzmienia zespołu. Kiedy nie gra, najczęściej spędza czas na pisaniu tekstów.</p>
+            </div>
+            <div class="team-member">
+                <img src="img/czlonkowie/osoba3.jpg" alt="Zdjęcie gitarzysty Pawła">
+                <h3>Paweł</h3>
+                <p>Paweł gra na gitarze basowej i wnosi do zespołu głęboki, pulsujący rytm. Jego spokojna obecność równoważy energię sceny. W wolnych chwilach zajmuje się produkcją muzyki i eksperymentuje z dźwiękiem.</p>
+            </div>
+            <div class="team-member">
+                <img src="perkusista.jpg" alt="Zdjęcie perkusisty Michała">
+                <h3>Michał</h3>
+                <p>Michał to nasz perkusista i kręgosłup rytmiczny zespołu. Jego precyzja i siła na bębnach sprawiają, że każdy koncert zapada w pamięć. Kiedy nie gra, często testuje nowe techniki perkusyjne i sprzęt.</p>
+            </div>
+            <div class="team-member">
+                <img src="bebniarz.jpg" alt="Zdjęcie bębniarza Adama">
+                <h3>Adam</h3>
+                <p>Adam gra na bębnach i dodaje zespołowi unikalnego brzmienia. Jego kreatywne podejście do rytmu daje każdemu utworowi dodatkowy wymiar. Poza sceną uwielbia podróżować i poznawać tradycyjne instrumenty perkusyjne.</p>
+            </div>
+            <div class="team-member">
+                <img src="wokalistka.jpg" alt="Zdjęcie wokalistki Ani">
+                <h3>Ania</h3>
+                <p>Ania to nasza charyzmatyczna wokalistka. Jej mocny głos i dynamiczna obecność na scenie są sercem zespołu. Gdy nie śpiewa, pracuje nad melodiami i pomysłami na nowe utwory.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-line"></div>
+            &copy 2024 Irownwill
+    </footer>
+
+    <script>
+        $(document).ready(function() {
+            let timeout;
+    
+            // Gdy myszka wchodzi na "O NAS" lub "mini"
+            $("#menu a:contains('O NAS'), #mini").on('mouseenter', function() {
+                clearTimeout(timeout); // Anuluj ukrywanie
+                $('#mini').stop(true, true).slideDown(300); // Pokaż menu
+            });
+    
+            // Gdy myszka opuszcza "O NAS" lub "mini"
+            $("#menu a:contains('O NAS'), #mini").on('mouseleave', function() {
+                timeout = setTimeout(function() {
+                    $('#mini').stop(true, true).slideUp(300); // Ukryj menu po opóźnieniu
+                }, 300); // Czas opóźnienia (300 ms)
+            });
+		});
+    </script>
+</body>
+</html>
