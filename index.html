@@ -12,7 +12,7 @@
     <header id="header">
         <!--LOGO--> 
         <nav id="logo">
-            <a href="index.html"><img src="img/logo43.png" alt="Logo zespołu"></a>
+            <a href="index.html"><img src="img/logo_szerokie.jpg" alt="Logo zespołu" style = "width:150%;"></a>
         </nav>
         
         <!--MENU-->
@@ -20,7 +20,7 @@
             <a id="wysun">O NAS</a>
             <a href="#">WYDARZENIA</a>
             <a href="#">ALBUMY</a>
-            <a href="#">SKLEP</a>
+            <a href="sklep.html">SKLEP</a>
             <a href="#">KONTAKT</a>
             <a href="#">BILETY</a>
         </nav>
@@ -34,15 +34,18 @@
 
     <!-- SLAJDY -->
     <nav id="slides">
-        <a id="slide"><img src="img/koncert_tlo1.jpg" style="width:100%;"></a>
-		<a id="slide"><img src="img/koncert_tlo2.jpg" style="width:100%;"></a>
-		<a id="slide"><img src="img/swistaaaaak.jpg" style="width:100%;"></a>
-		
+        <a id="slide"><img src="img/slide/koncert_tlo1.jpg" style="width:100%;"></a>
+		<a id="slide"><img src="img/slide/koncert_tlo2.jpg" style="width:100%;"></a>
+		<a id="slide"><img src="img/slide/koncert_tlo3.jpg" style="width:100%;"></a>
+		<a id="slide"><img src="img/slide/koncert_tlo4.jpg" style="width:100%;"></a>
+		<a id="slide"><img src="img/slide/koncert_tlo5.jpg" style="width:100%;"></a>
 		<!-- Strzałki -->
 		<button id="prev">&#10094;</button>
 		<button id="next">&#10095;</button>
 		<!-- Kropeczki -->
 		<div id="dots">
+			<span class="dot"></span>
+			<span class="dot"></span>
 			<span class="dot"></span>
 			<span class="dot"></span>
 			<span class="dot"></span>
@@ -177,6 +180,16 @@
                 });
 			});
 		});
+		
+		document.addEventListener("scroll", () => {
+			const menu = document.getElementById("header");
+			if (window.scrollY > 50) {
+				menu.style.backgroundColor = "rgba(0,0,0, 0.6)"; // Ciemne tło po przewinięciu
+			} else {
+				menu.style.backgroundColor = "rgba(0, 0, 0, 1)"; // Przezroczyste tło na górze
+			}
+		});
+		
     </script>
 </body>
 </html>
