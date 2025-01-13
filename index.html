@@ -2,17 +2,27 @@
 <html lang="pl">
 <head>
     <meta charset="utf-8">
+<<<<<<< HEAD
 	<title>Ironwill</title>
 	<link rel="shortcut icon" href="img/ikona.png">
     <script src="jquery-3.7.1.min.js"></script>
     <link rel="stylesheet" href="index.css">
+=======
+    <script src="jquery-3.7.1.min.js"></script>
+    <link rel="stylesheet" href="index.css">
+    <title>Strona Zespołu Rockowego</title>
+>>>>>>> 5f0b0769985a634c44d5b4bf00edbea75431ec7d
     <script defer src="index.js"></script>
 </head>
 <body>
     <header id="header">
         <!--LOGO--> 
         <nav id="logo">
+<<<<<<< HEAD
             <a href="index.html"><img src="img/logo_szerokie.jpg" alt="Logo zespołu" style = "width:150%;"></a>
+=======
+            <a href="index.html"><img src="suns.jpg" alt="Logo zespołu"></a>
+>>>>>>> 5f0b0769985a634c44d5b4bf00edbea75431ec7d
         </nav>
         
         <!--MENU-->
@@ -20,7 +30,11 @@
             <a id="wysun">O NAS</a>
             <a href="#">WYDARZENIA</a>
             <a href="#">ALBUMY</a>
+<<<<<<< HEAD
             <a href="sklep.html">SKLEP</a>
+=======
+            <a href="#">SKLEP</a>
+>>>>>>> 5f0b0769985a634c44d5b4bf00edbea75431ec7d
             <a href="#">KONTAKT</a>
             <a href="#">BILETY</a>
         </nav>
@@ -28,17 +42,29 @@
 
     <nav id="mini">
         <a href="#">HISTORIA ZESPOŁU</a>
+<<<<<<< HEAD
         <a href="ekipa.html">EKIPA</a>
+=======
+        <a href="#">EKIPA</a>
+>>>>>>> 5f0b0769985a634c44d5b4bf00edbea75431ec7d
         <a href="#">GALERIA</a>
     </nav>
 
     <!-- SLAJDY -->
+<<<<<<< HEAD
     <nav id="slides">
         <a id="slide"><img src="img/slide/koncert_tlo1.jpg" style="width:100%;"></a>
 		<a id="slide"><img src="img/slide/koncert_tlo2.jpg" style="width:100%;"></a>
 		<a id="slide"><img src="img/slide/koncert_tlo3.jpg" style="width:100%;"></a>
 		<a id="slide"><img src="img/slide/koncert_tlo4.jpg" style="width:100%;"></a>
 		<a id="slide"><img src="img/slide/koncert_tlo5.jpg" style="width:100%;"></a>
+=======
+    <nav id="slides"> <!--na przyszlosc: moze zrobimy z tego linki do danej aktualnosci? -->
+        <a id="slide"><img src="swistak.jpg" style="width:100%;"></a>
+		<a id="slide"><img src="swistaaak.jpg" style="width:100%;"></a>
+		<a id="slide"><img src="swistaaaaak.jpg" style="width:100%;"></a>
+		
+>>>>>>> 5f0b0769985a634c44d5b4bf00edbea75431ec7d
 		<!-- Strzałki -->
 		<button id="prev">&#10094;</button>
 		<button id="next">&#10095;</button>
@@ -47,13 +73,19 @@
 			<span class="dot"></span>
 			<span class="dot"></span>
 			<span class="dot"></span>
+<<<<<<< HEAD
 			<span class="dot"></span>
 			<span class="dot"></span>
+=======
+>>>>>>> 5f0b0769985a634c44d5b4bf00edbea75431ec7d
 		</div>
     </nav>
 
     <!-- Aktualności -->
+<<<<<<< HEAD
 	<h1>Aktualności</h1>
+=======
+>>>>>>> 5f0b0769985a634c44d5b4bf00edbea75431ec7d
     <div class="content">
         <div class="column">
             <h2>Lorem Ipsum</h2>
@@ -74,8 +106,124 @@
 
     <footer class="footer">
         <div class="footer-line"></div>
+<<<<<<< HEAD
             &copy 2024 Irownwill
     </footer>
+=======
+            &copy 2024 NazwaZespołu
+    </footer>
+
+    <script>
+        $(document).ready(function() {
+            let timeout; // Zmienna do zarządzania opóźnieniem
+    
+            // Gdy myszka wchodzi na "O NAS" lub "mini"
+            $("#menu a:contains('O NAS'), #mini").on('mouseenter', function() {
+                clearTimeout(timeout); // Anuluj ukrywanie
+                $('#mini').stop(true, true).slideDown(300); // Pokaż menu
+            });
+    
+            // Gdy myszka opuszcza "O NAS" lub "mini"
+            $("#menu a:contains('O NAS'), #mini").on('mouseleave', function() {
+                timeout = setTimeout(function() {
+                    $('#mini').stop(true, true).slideUp(300); // Ukryj menu po opóźnieniu
+                }, 300); // Czas opóźnienia (300 ms)
+            });
+
+			<!-- SLAJDY, STRZAŁKI, KROPECZKI -->
+			let slides = $("#slides a");
+			let dots = $("#dots .dot");
+			let currentIndex = 1;
+
+			slides.hide();
+			slides.eq(currentIndex).show();
+			dots.eq(currentIndex).addClass("active");
+	
+			function showNextSlide() {
+				slides.eq(currentIndex).fadeOut(500, function() {
+				currentIndex = (currentIndex + 1) % slides.length;
+				slides.eq(currentIndex).fadeIn(500);
+				updateDots();
+			});
+			}
+	
+			function showPrevSlide() {
+				slides.eq(currentIndex).fadeOut(500, function() {
+				currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+				slides.eq(currentIndex).fadeIn(500);
+				updateDots();
+			});
+			}
+			function updateDots() {
+				dots.removeClass("active"); // Usuń klasę aktywną ze wszystkich kropeczek
+				dots.eq(currentIndex).addClass("active"); // Dodaj klasę aktywną do bieżącej kropeczki
+			}
+			function startAutoSlide() {
+				interval = setInterval(showNextSlide, 2000);
+			}
+
+			function stopAutoSlide() {
+				clearInterval(interval);
+			}
+	
+			function showNextSlideOnClick() {
+				slides.eq(currentIndex).fadeOut(200, function() {
+				currentIndex = (currentIndex + 1) % slides.length;
+				slides.eq(currentIndex).fadeIn(200);
+			});
+			}
+			function showPrevSlideOnClick() {
+				slides.eq(currentIndex).fadeOut(200, function() {
+				currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+				slides.eq(currentIndex).fadeIn(200);
+			});
+			}
+	    
+			// Obsługa kropeczek
+			dots.click(function() {
+				stopAutoSlide();
+				currentIndex = $(this).index(); // Ustaw indeks na klikniętą kropeczkę
+				slides.fadeOut(500);
+				slides.eq(currentIndex).fadeIn(500); // Pokaż slajd odpowiadający klikniętej kropeczce
+				updateDots(); // Zaktualizuj aktywną kropeczkę
+				startAutoSlide();
+			}); 
+	
+			$("#next").click(function () {
+				stopAutoSlide();
+				showNextSlideOnClick();
+				updateDots();
+				startAutoSlide();
+			});
+
+			$("#prev").click(function () {
+				stopAutoSlide();
+				showPrevSlideOnClick();
+				updateDots();
+				startAutoSlide();
+			});
+	
+			interval = setInterval(showNextSlide, 2000);
+
+
+			$(document).ready(function() {
+				let strzalki = $("#prev, #next");
+				strzalki.hide();
+			$("#slides").mouseenter(function() {
+				$("#prev, #next").fadeIn();
+			});
+			$("#slides").mouseleave(function() {
+				$("#prev, #next").fadeOut();
+			});
+			
+			});
+			
+		});
+
+
+
+    </script>
+>>>>>>> 5f0b0769985a634c44d5b4bf00edbea75431ec7d
 
     <script>
         $(document).ready(function() {
