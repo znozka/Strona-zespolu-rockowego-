@@ -21,7 +21,8 @@ main {
     align-items: center;
     justify-content: space-between;
     background-color: #000;
-	border-bottom: 0.25vw solid #000;
+	/*border-bottom: 0.25vw solid #000;*/
+	z-index: 20;
 }
 
 #logo_podstrona {
