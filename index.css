@@ -1,7 +1,6 @@
 body {
 	margin: 0;
 	padding: 0;
-<<<<<<< HEAD
 	font-size: 1vw;
 	font-family: verdana;
 	background-color: #000;
@@ -114,91 +113,22 @@ padding-right: 3vw;
 	background-color: #000;
 	margin-left: 22%;
 }
-=======
-	font-size: 12px;
-	font-family: serif;
-	/*background-color: #cfcfcf;*/
-	background-color: #000; /*co ty za zmianą na czarny żeby było minimalistyczniej?*/
-}
-
-#header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #404040;
-    padding: 10px 40px 10px 20px;
-    border-bottom: 2px solid #000;
-}
-
-#logo img {
-	width: 200px;
-}
-
-#menu {
-	display: flex;
-	gap: 20px;
-}
-#menu a {
-	display: inline-block;
-	text-decoration: none;
-	margin: 0 10px;
-	line-height: 20px;
-	text-align: center;
-	cursor: pointer;
-	color: #fff;
-	font-size: 17px;
-	transition: background-color 0.3s, color 0.3s;	
-}
-#menu a:nth-child(1), #menu a:nth-child(2), #menu a:nth-child(3), #menu a:nth-child(4), #menu a:nth-child(5){
-	border-right-style: solid;
-	padding-right: 30px;
-}
-#menu a:hover {
-    background-color: rgba(64, 64, 64, 0.5);
-	color: rgb(191, 191, 191);
-}
-
-#mini {
-	position: absolute;
-	display: none;
-	z-index: 10;
-	width: 200px;
-	text-align: center;
-	background-color: #404040;
-	left: 600px; /*to trzeba jakoś zmienić tak, żeby ono się wyświetlało pod "o nas" a nie w konkretnym ustalonym miejscu*/
-}
->>>>>>> 5f0b0769985a634c44d5b4bf00edbea75431ec7d
 #mini a {
 	display: block;
 	text-decoration: none;	
 	color: #fff;
-<<<<<<< HEAD
 	line-height: 2.5vw;
 	font-size: 1vw;
 	text-align: center;
 	cursor: pointer;
 	border-bottom: 0.2vw solid #000;
-=======
-	line-height: 25px;
-	font-size: 10px;
-	margin-bottom: 1px;
-	text-align: center;
-	cursor: pointer;
-	border-bottom: 1px solid #000;
->>>>>>> 5f0b0769985a634c44d5b4bf00edbea75431ec7d
 	transition: background-color 0.3s, color 0.3s;
 }
 #mini a:hover {
     background-color: rgba(0, 0, 0, 0.2); /*czemu to nie działa?*/
 	color: rgb(191, 191, 191);
 }
-<<<<<<< HEAD
 
-=======
-#slides {
-	background-color: #404040; /*zmieniłam z czarnego na ten tylko dlatego że zmiana pomiędzy zdjęciami jest mniej widoczna ale zastanawiam się czy po prostu nie zmienić sposobu w jaki następują po sobie */
-}
->>>>>>> 5f0b0769985a634c44d5b4bf00edbea75431ec7d
 #slides .slide {
     position: relative;
 	display: none;
@@ -207,23 +137,14 @@ padding-right: 3vw;
 #slides .slide:first-child {
     display: block;
 }
-<<<<<<< HEAD
 
 /*Strzałki*/
-=======
-/*Strzałki*/
-
->>>>>>> 5f0b0769985a634c44d5b4bf00edbea75431ec7d
 #prev, #next {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     z-index: 10;
-<<<<<<< HEAD
     color: rgb(208, 11, 14);
-=======
-    color: black;
->>>>>>> 5f0b0769985a634c44d5b4bf00edbea75431ec7d
 	background-color: rgba(0,0,0,0);
     border: none;
     font-size: 30px;
@@ -233,24 +154,12 @@ padding-right: 3vw;
 	display: block;
     opacity: 1 !important;
 }
-<<<<<<< HEAD
 #prev {
     left: 10px;
 }
 #next {
     right: 10px;
 }
-=======
-
-#prev {
-    left: 10px;
-}
-
-#next {
-    right: 10px;
-}
-
->>>>>>> 5f0b0769985a634c44d5b4bf00edbea75431ec7d
 #prev:hover, #next:hover {
     
 }
@@ -258,16 +167,11 @@ padding-right: 3vw;
 /* Style dla kropeczek */
 #dots {
     position: absolute;
-<<<<<<< HEAD
     top: 82%;
-=======
-    top: 90%;             /* COŚ JEST NIE TAK ALE NIE WIEM JAK NAPRAWIĆ kropeczki chciałam żeby byly na dole zdjęć a są na środku (?) */
->>>>>>> 5f0b0769985a634c44d5b4bf00edbea75431ec7d
     left: 50%;
     transform: translateX(-50%);
     display: flex;
     justify-content: center;
-<<<<<<< HEAD
     gap: 0.8vw;
 }
 .dot {
@@ -279,21 +183,6 @@ padding-right: 3vw;
 }
 .dot.active {
     background-color: rgba(208, 11, 14, 1); /* Pełna czerwień dla aktywnej kropeczki */
-=======
-    gap: 10px;
-}
-
-.dot {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: rgba(255, 0, 0, 0.5); /* Czerwony, półprzezroczysty */
-    cursor: pointer;
-}
-
-.dot.active {
-    background-color: rgba(255, 0, 0, 1); /* Pełna czerwień dla aktywnej kropeczki */
->>>>>>> 5f0b0769985a634c44d5b4bf00edbea75431ec7d
 }
 
 .content {
@@ -303,8 +192,6 @@ padding-right: 3vw;
 }
 .column {
     flex: 1;
-<<<<<<< HEAD
-=======
 	height: 200px;
     padding: 10px;
     background-color: #404040;
@@ -312,34 +199,6 @@ padding-right: 3vw;
 	color: #fff;
 }
 
-.footer {
-    text-align: center;
-    font-size: 12px;
-    color: #fff;
-    margin-top: 20px;
-	padding-bottom: 20px;
-    position: relative;
-	background-color: #404040;
-	height: 50px;
-}
-.footer-line {
-    width: 100%;
-    height: 2px;
-    background-color: #000;
-    margin-bottom: 10px;
-}
-
-/*.column1 {
-    flex: 3; 
->>>>>>> 5f0b0769985a634c44d5b4bf00edbea75431ec7d
-	height: 200px;
-    padding: 10px;
-    background-color: #404040;
-    border: 2px solid #000;
-	color: #fff;
-}
-
-<<<<<<< HEAD
 .footer {
     text-align: center;
     font-size: 1vw;
@@ -407,34 +266,3 @@ padding-right: 3vw;
     line-height: 1.5;
 }
 
-=======
-#logo {
-	margin-top: 10px;
-	margin-left:10px;
-	position: absolute;
-	z-index: 10;
-}
-
-#menu a:nth-child(1), #menu a:nth-child(2), #menu a:nth-child(3), #menu a:nth-child(4), #menu a:nth-child(5){
-	width: 150px;
-	height: 60px;
-	line-height: 60px;
-	border-right-style: solid;
-}
-#menu a:nth-child(6){
-	width: 120px;
-	margin-right: 20px;
-}
-
-#mini a:nth-child(1), #mini a:nth-child(2){
-	width: 200px;
-	height: 30px;
-	line-height: 30px;
-	border-bottom-style: solid;
-}
-#mini a:nth-child(3){
-	width: 200px;
-	height: 30px;
-	line-height: 30px;
-}*/
->>>>>>> 5f0b0769985a634c44d5b4bf00edbea75431ec7d
