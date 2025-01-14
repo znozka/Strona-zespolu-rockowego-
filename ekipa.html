@@ -2,7 +2,7 @@
 <html lang="pl">
 <head>
     <meta charset="utf-8">
-	<title>Ironwill</title>
+	<title>Ekipa</title>
 	<link rel="shortcut icon" href="img/ikona.png">
     <script src="jquery-3.7.1.min.js"></script>
     <link rel="stylesheet" href="index.css">
@@ -16,17 +16,17 @@
         </nav>
         
         <!--MENU-->
-        <nav id="menu_podstrona">
+        <nav id="menu">
             <a id="wysun">O NAS</a>
-            <a href="Wydarzenia.html">WYDARZENIA</a>
+            <a href="wydarzenia.html">WYDARZENIA</a>
             <a href="#">ALBUMY</a>
             <a href="sklep.html">SKLEP</a>
             <a href="#">KONTAKT</a>
-            <a href="#">BILETY</a>
+            <a href="https://www.kupbilecik.pl/" target="_blank">BILETY</a>
         </nav>
     </header>
 
-    <nav id="mini">
+    <nav id="mini_ekipa">
         <a href="#">HISTORIA ZESPOŁU</a>
         <a href="ekipa.html">EKIPA</a>
         <a href="#">GALERIA</a>
@@ -34,6 +34,7 @@
 
     <main>
         <section class="team-gallery">
+			
             <div class="team-member">
                 <img src="img/czlonkowie/osoba2.jpg" alt="Zdjęcie gitarzystki Kasi">
                 <h3>Kasia</h3>
@@ -50,17 +51,17 @@
                 <p>Paweł gra na gitarze basowej i wnosi do zespołu głęboki, pulsujący rytm. Jego spokojna obecność równoważy energię sceny. W wolnych chwilach zajmuje się produkcją muzyki i eksperymentuje z dźwiękiem.</p>
             </div>
             <div class="team-member">
-                <img src="perkusista.jpg" alt="Zdjęcie perkusisty Michała">
+                <img src="img/czlonkowie/osoba7.jpg" alt="Zdjęcie perkusisty Michała">
                 <h3>Michał</h3>
                 <p>Michał to nasz perkusista i kręgosłup rytmiczny zespołu. Jego precyzja i siła na bębnach sprawiają, że każdy koncert zapada w pamięć. Kiedy nie gra, często testuje nowe techniki perkusyjne i sprzęt.</p>
             </div>
             <div class="team-member">
-                <img src="bebniarz.jpg" alt="Zdjęcie bębniarza Adama">
+                <img src="img/czlonkowie/osoba4.jpg" alt="Zdjęcie bębniarza Adama">
                 <h3>Adam</h3>
                 <p>Adam gra na bębnach i dodaje zespołowi unikalnego brzmienia. Jego kreatywne podejście do rytmu daje każdemu utworowi dodatkowy wymiar. Poza sceną uwielbia podróżować i poznawać tradycyjne instrumenty perkusyjne.</p>
             </div>
             <div class="team-member">
-                <img src="wokalistka.jpg" alt="Zdjęcie wokalistki Ani">
+                <img src="img/czlonkowie/osoba8.jpg" alt="Zdjęcie wokalistki Ani">
                 <h3>Ania</h3>
                 <p>Ania to nasza charyzmatyczna wokalistka. Jej mocny głos i dynamiczna obecność na scenie są sercem zespołu. Gdy nie śpiewa, pracuje nad melodiami i pomysłami na nowe utwory.</p>
             </div>
@@ -70,6 +71,7 @@
     <footer class="footer">
         <div class="footer-line"></div>
             &copy 2024 Irownwill
+			<p>zdjęcia pochodzą ze strony freepik.com</p>
     </footer>
 
     <script>
@@ -77,15 +79,15 @@
             let timeout;
     
             // Gdy myszka wchodzi na "O NAS" lub "mini"
-            $("#menu_podstrona a:contains('O NAS'), #mini").on('mouseenter', function() {
+            $("#menu a:contains('O NAS'), #mini_ekipa").on('mouseenter', function() {
                 clearTimeout(timeout); // Anuluj ukrywanie
-                $('#mini').stop(true, true).slideDown(300); // Pokaż menu
+                $('#mini_ekipa').stop(true, true).slideDown(300); // Pokaż menu
             });
     
             // Gdy myszka opuszcza "O NAS" lub "mini"
-            $("#menu_podstrona a:contains('O NAS'), #mini").on('mouseleave', function() {
+            $("#menu a:contains('O NAS'), #mini_ekipa").on('mouseleave', function() {
                 timeout = setTimeout(function() {
-                    $('#mini').stop(true, true).slideUp(300); // Ukryj menu po opóźnieniu
+                    $('#mini_ekipa').stop(true, true).slideUp(300); // Ukryj menu po opóźnieniu
                 }, 300); // Czas opóźnienia (300 ms)
             });
 		});

@@ -21,7 +21,8 @@ main {
     align-items: center;
     justify-content: space-between;
     background-color: #000;
-	border-bottom: 0.25vw solid #000;
+	/*border-bottom: 0.25vw solid #000;*/
+	z-index: 20;
 }
 
 #logo_podstrona {
@@ -87,7 +88,7 @@ padding-right: 3vw;
 	font-size: 1vw;
 	text-align: center;
 	cursor: pointer;
-	border-bottom: 0.2vw solid #000;
+	border-bottom: 0.2vw solid #fff;
 	transition: background-color 0.3s, color 0.3s;
 }
 #mini a:hover {
@@ -100,10 +101,10 @@ padding-right: 3vw;
 	padding-bottom: 1vw;
 	margin-left: 2%;
 	margin-right: 2%;
+	margin-top: 1vw;
 	font-family: verdana;
 	height: 5vw;
 	color: #000;
-	margin-top: 2vw;
 	font-size: 2.5vw;
 	font-style: bold;
 	letter-spacing: 0.3vw;
@@ -121,67 +122,14 @@ padding-right: 3vw;
 }
 
 /*Wydarzenia*/
-/*
-        .calendar-title {
-            text-align: center;
-            margin: 20px 0;
-            font-size: 32px;
-            font-weight: bold;
-            color: #cc2900;
-			padding-top: 5vw;
-        }
-        .calendar-container {
-            max-width: 800px;
-            margin: 20px auto;
-            background: #fff;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-            overflow: hidden;
-			margin-top: 6vw;
-            padding: 20px;
-        }
-        .calendar-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 20px;
-        }
-        .event-item {
-            background-color: #333;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
-        .event-item:hover {
-            transform: scale(1.05);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-        }
-        .event-date {
-            font-size: 18px;
-            color: #fff;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-        .event-details {
-            font-size: 16px;
-            color: #fff;
-            margin-bottom: 5px;
-        }
-        .event-location {
-            font-style: italic;
-            color: #cc2900;
-        }
-		*/
+
 		.calendar-title {
             text-align: center;
             margin: 20px 0;
             font-size: 32px;
             font-weight: bold;
             color: #cc2900;
-			padding-top: 5vw;
+			padding-top: 7vw;
         }
         .calendar-container {
             max-width: 800px;
