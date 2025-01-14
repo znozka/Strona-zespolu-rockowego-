@@ -107,11 +107,11 @@ padding-right: 3vw;
 	position: absolute;
 	display: none;
 	z-index: 1000;
-	width: 18vw;
+	width: 14vw;
 	margin-top: 4.8vw;
 	text-align: center;
-	background-color: #000;
-	margin-left: 22%;
+	background-color: rgba(0,0,0, 0.9);
+	margin-left: 22.3%;
 }
 #mini a {
 	display: block;
@@ -121,12 +121,12 @@ padding-right: 3vw;
 	font-size: 1vw;
 	text-align: center;
 	cursor: pointer;
-	border-bottom: 0.2vw solid #000;
+	/*border-bottom: 0.2vw solid #000;*/
 	transition: background-color 0.3s, color 0.3s;
 }
 #mini a:hover {
-    background-color: rgba(0, 0, 0, 0.2); /*czemu to nie działa?*/
-	color: rgb(191, 191, 191);
+	color: rgb(0,0,0);
+	background-image: linear-gradient(to right, white, #d9d9d9, #bfbfbf, #a6a6a6, #8c8c8c, #737373, #595959, #404040); 
 	
 }
 
@@ -134,11 +134,11 @@ padding-right: 3vw;
 	position: absolute;
 	display: none;
 	z-index: 1000;
-	width: 18vw;
+	width: 14vw;
 	margin-top: 0vw;
 	text-align: center;
 	background-color: rgba(38,38,38, 0.9);
-	margin-left: 22%;
+	margin-left: 22.3%;
 }
 #mini_ekipa a {
 	display: block;
@@ -148,12 +148,12 @@ padding-right: 3vw;
 	font-size: 1vw;
 	text-align: center;
 	cursor: pointer;
-	border-bottom: 0.2vw solid rgba(0, 0, 0, 0.6);
+	/*border-bottom: 0.2vw solid rgba(0, 0, 0, 0.6);*/
 	transition: background-color 0.3s, color 0.3s;
 }
 #mini_ekipa a:hover {
-    background-color: rgba(0, 0, 0, 0.8); /*czemu to nie działa?*/
-	color: rgb(191, 191, 191);
+	color: rgb(0,0,0);
+	background-image: linear-gradient(to right, white, #d9d9d9, #bfbfbf, #a6a6a6, #8c8c8c, #737373, #595959, #404040); 
 	
 }
 
