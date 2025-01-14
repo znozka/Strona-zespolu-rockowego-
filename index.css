@@ -15,7 +15,6 @@ body {
     justify-content: space-between;
     background-color: #000;
 	z-index: 1000; /*To nam ratuje menu, żeby nie migało!*/
-	/*border-bottom: 0.25vw solid #000; ja bym usunęła przy tym przezroczystym obecnie */
 }
 
 h1 {
@@ -33,17 +32,16 @@ h1 {
     padding: 0.4vw 1vw; 
 }
 #logo img {
-	height: 6vw;
+	height: 5vw;
 }
 
 #menu {
     display: flex;
-    margin-left: 22%;
+    margin-left: 26%;
 	height: 2.5vw;
 	padding: 1.2vw 4vw 1.2vw 2.3vw;
 	width: 100%; 
 }
-
 #menu a {
     display: inline-block; 
     text-decoration: none;
@@ -53,53 +51,17 @@ h1 {
     font-size: 1.2vw; 
 	padding-left: 3vw;
 }
-
 #menu a:nth-child(1), #menu a:nth-child(2), #menu a:nth-child(3), #menu a:nth-child(4), #menu a:nth-child(5){
 	border-right-style: solid;
 	padding-right: 3vw;
 }
 #menu a:nth-child(6){
 	border-right: solid rgba(0,0,0,0);
-	padding-right: 3vw;
+	padding-right: 2vw;
 }
 #menu a:hover {
 	color:black;
 	background-image: linear-gradient(to right, white, #d9d9d9, #bfbfbf, #a6a6a6, #8c8c8c, #737373, #595959, #404040); /*Na głównej stronie nie pasuje*/
-   /* background-color: rgba(64, 64, 64, 0.5);
-    color: rgb(191, 191, 191);*/
-
-}
-#menu_podstrona {
-    display: flex;
-    margin-left: 22%;
-	height: 2.5vw;
-	padding: 1.2vw 4vw 1.2vw 2.3vw;
-	width: 100%; 
-}
-
-#menu_podstrona  a {
-    display: inline-block; 
-    text-decoration: none;
-    line-height: 2.5vw; 
-    cursor: pointer;
-    color: #fff;
-    font-size: 1.2vw; 
-	padding-left: 3vw;
-}
-
-#menu_podstrona  a:nth-child(1), #menu_podstrona  a:nth-child(2), #menu_podstrona  a:nth-child(3), #menu_podstrona a:nth-child(4), #menu_podstrona  a:nth-child(5){
-border-right-style: solid;
-padding-right: 3vw;
-}
-#menu_podstrona  a:nth-child(6){
-border-right: solid rgba(0,0,0,0);
-padding-right: 3vw;
-}
-#menu_podstrona a:hover {
-	background-image: linear-gradient(to right, white, #d9d9d9, #bfbfbf, #a6a6a6, #8c8c8c, #737373, #595959, #404040);
-    /*background-color: rgba(64, 64, 64, 0.5);
-    color: rgb(191, 191, 191);*/
-	color:black;
 }
 
 #mini {
@@ -110,7 +72,7 @@ padding-right: 3vw;
 	margin-top: 4.8vw;
 	text-align: center;
 	background-color: rgba(0,0,0, 0.9);
-	margin-left: 22.3%;
+	margin-left: 26%;
 }
 #mini a {
 	display: block;
@@ -120,24 +82,22 @@ padding-right: 3vw;
 	font-size: 1vw;
 	text-align: center;
 	cursor: pointer;
-	/*border-bottom: 0.2vw solid #000;*/
 	transition: background-color 0.3s, color 0.3s;
 }
 #mini a:hover {
 	color: rgb(0,0,0);
 	background-image: linear-gradient(to right, white, #d9d9d9, #bfbfbf, #a6a6a6, #8c8c8c, #737373, #595959, #404040); 
-	
 }
 
 #mini_ekipa {
-	position: absolute;
+    position: absolute;
 	display: none;
 	z-index: 1000;
 	width: 14vw;
-	margin-top: 0vw;
+	margin-top: 4.8vw;
 	text-align: center;
-	background-color: rgba(38,38,38, 0.9);
-	margin-left: 22.3%;
+	background-color: rgba(0,0,0, 0.9);
+	margin-left: 26%;
 }
 #mini_ekipa a {
 	display: block;
@@ -147,7 +107,6 @@ padding-right: 3vw;
 	font-size: 1vw;
 	text-align: center;
 	cursor: pointer;
-	/*border-bottom: 0.2vw solid rgba(0, 0, 0, 0.6);*/
 	transition: background-color 0.3s, color 0.3s;
 }
 #mini_ekipa a:hover {
@@ -155,7 +114,6 @@ padding-right: 3vw;
 	background-image: linear-gradient(to right, white, #d9d9d9, #bfbfbf, #a6a6a6, #8c8c8c, #737373, #595959, #404040); 
 	
 }
-
 
 #slides .slide {
     position: relative;

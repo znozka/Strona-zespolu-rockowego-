@@ -17,7 +17,7 @@
         </nav>
         
         <!--MENU-->
-        <nav id="menu_podstrona">
+        <nav id="menu">
             <a id="wysun">O NAS</a>
             <a href="wydarzenia.html">WYDARZENIA</a>
             <a href="#">ALBUMY</a>
@@ -37,24 +37,26 @@
 	    <p>AKCESORIA IRONWILL<p>
 	</div>-->
 
+    <h1>Nasz merch</h1>
+    
 	<div class="content">
         <div class="article tall">
-            <img src="img/sklep/bag.png" alt="Bag">
+            <img src="img/sklep/naklejki.png" alt="Naklejki">
         </div>
         <div class="article tall">
-            <img src="img/sklep/bluza.png" alt="Bluza">
+            <img src="img/sklep/czapka.png" alt="Czapka">
         </div>
         <div class="article tall">
-            <img src="img/sklep/tshirtM.png" alt="T-shirt">
-        </div>
-        <div class="article wide">
             <img src="img/sklep/case.png" alt="Case">
         </div>
         <div class="article wide">
-            <img src="img/sklep/czapka.png" alt="Czapka">
+            <img src="img/sklep/bluza.png" alt="Bluza">
         </div>
         <div class="article wide">
-            <img src="img/sklep/naklejki.png" alt="Naklejki">
+            <img src="img/sklep/bag.png" alt="Torba">
+        </div>
+        <div class="article wide">
+            <img src="img/sklep/tshirtM.png" alt="T-shirt">
         </div>
     </div>
 	</main>
@@ -68,13 +70,13 @@
             let timeout;
     
             // Gdy myszka wchodzi na "O NAS" lub "mini"
-            $("#menu_podstrona a:contains('O NAS'), #mini").on('mouseenter', function() {
+            $("#menu a:contains('O NAS'), #mini").on('mouseenter', function() {
                 clearTimeout(timeout); // Anuluj ukrywanie
                 $('#mini').stop(true, true).slideDown(300); // Pokaż menu
             });
     
             // Gdy myszka opuszcza "O NAS" lub "mini"
-            $("#menu_podstrona a:contains('O NAS'), #mini").on('mouseleave', function() {
+            $("#menu a:contains('O NAS'), #mini").on('mouseleave', function() {
                 timeout = setTimeout(function() {
                     $('#mini').stop(true, true).slideUp(300); // Ukryj menu po opóźnieniu
                 }, 300); // Czas opóźnienia (300 ms)

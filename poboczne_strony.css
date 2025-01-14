@@ -1,6 +1,5 @@
 /*SKLEP*/
 #merch {
-    padding-top: 7vw;
     padding-bottom: 1vw;
     margin: 0 2%;
     font-family: verdana;
@@ -29,11 +28,6 @@ body {
 	background-color: #000;
 	position: relative;
 }
-/*main {
-	background-color: #000;
-	margin-left: 2%;
-	margin-right: 2%;
-}*/
 #header {
 	position: fixed;
 	top: 0;
@@ -42,11 +36,12 @@ body {
     align-items: center;
     justify-content: space-between;
     background-color: #000;
-	/*border-bottom: 0.25vw solid #000;*/
 	z-index: 20;
 }
 h1 {
-	color: #fff;
+	margin-top: 6vw;
+    margin-bottom: 0;
+    color: #fff;
 	font-size: 2vw;
 	padding: 0 2vw;
 	letter-spacing: 0.1vw;
@@ -63,7 +58,7 @@ h1 {
 	height: 4.5vw;
 }
 
-#menu_podstrona {
+#menu {
     display: flex;
 	z-index: 20;
     margin-left: 22%;
@@ -72,7 +67,7 @@ h1 {
 	width: 100%; 
 }
 
-#menu_podstrona a {
+#menu a {
     display: inline-block; 
     text-decoration: none;
     line-height: 2.5vw; 
@@ -82,18 +77,16 @@ h1 {
 	padding-left: 3vw;
 }
 
-#menu_podstrona a:nth-child(1), #menu_podstrona  a:nth-child(2), #menu_podstrona  a:nth-child(3), #menu_podstrona a:nth-child(4), #menu_podstrona  a:nth-child(5){
+#menu a:nth-child(1), #menu  a:nth-child(2), #menu a:nth-child(3), #menu a:nth-child(4), #menu  a:nth-child(5){
     border-right-style: solid;
     padding-right: 3vw;
 }
-#menu_podstrona a:nth-child(6){
+#menu a:nth-child(6){
     border-right: solid rgba(0,0,0,0);
     padding-right: 3vw;
 }
-#menu_podstrona a:hover {
+#menu a:hover {
 	background-image: linear-gradient(to right, white, #d9d9d9, #bfbfbf, #a6a6a6, #8c8c8c, #737373, #595959, #404040);
-    /*background-color: rgba(64, 64, 64, 0.5);
-    color: rgb(191, 191, 191);*/
 	color:black;
     position: relative;
 }
@@ -115,27 +108,12 @@ h1 {
 	font-size: 1vw;
 	text-align: center;
 	cursor: pointer;
-	border-bottom: 0.2vw solid #fff;
 	transition: background-color 0.3s, color 0.3s;
 }
 #mini a:hover {
     background-color: rgba(0, 0, 0, 0.2); /*czemu to nie działa?*/
 	color: rgb(191, 191, 191);
 }
-/*sklep*/
-/*#merch{
-	padding-top: 7vw;
-	padding-bottom: 1vw;
-	margin-left: 2%;
-	margin-right: 2%;
-	margin-top: 1vw;
-	font-family: verdana;
-	height: 5vw;
-	color: #000;
-	font-size: 2.5vw;
-	font-style: bold;
-	letter-spacing: 0.3vw;
-}*/
 .content {
     margin-top: 4vw;
 	display: grid;
@@ -148,7 +126,7 @@ h1 {
     box-shadow: 0 0.4vw 1vw rgba(0,0,0, 0.7);
 }
 
-/*Wydarzenia*/
+/* WYDARZENIA */
 		.calendar-title {
             text-align: center;
             margin: 20px 0;
