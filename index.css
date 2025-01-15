@@ -1,3 +1,4 @@
+/* STRONA GŁÓWNA i GLOBALNE */
 body {
 	margin: 0;
 	padding: 0;
@@ -68,12 +69,12 @@ h1 {
 	display: none;
 	position: absolute;
 	top: 100%;
-	left: 38%;
+	left: 38.05%;
 	transform: translateX(-50%);
 	padding: 0.1vw 0;
 	list-style: none;
 	z-index: 1000;
-	width: 10vw;
+	width: 8vw;
 	text-align: center;
 	background-color: rgba(0,0,0, 0.9);
     margin-top: -1.5vw;
@@ -93,31 +94,6 @@ h1 {
 	background-image: linear-gradient(to right, white, #d9d9d9, #bfbfbf, #a6a6a6, #8c8c8c, #737373, #595959, #404040); 
 }
 
-#mini_ekipa {
-    position: absolute;
-	display: none;
-	z-index: 1000;
-	width: 14vw;
-	margin-top: 4.8vw;
-	text-align: center;
-	background-color: rgba(0,0,0, 0.9);
-	margin-left: 26%;
-}
-#mini_ekipa a {
-	display: block;
-	text-decoration: none;	
-	color: #fff;
-	line-height: 2.5vw;
-	font-size: 1vw;
-	text-align: center;
-	cursor: pointer;
-	transition: background-color 0.3s, color 0.3s;
-}
-#mini_ekipa a:hover {
-	color: rgb(0,0,0);
-	background-image: linear-gradient(to right, white, #d9d9d9, #bfbfbf, #a6a6a6, #8c8c8c, #737373, #595959, #404040); 
-}
-
 #slides .slide {
     position: relative;
 	display: none;
@@ -129,7 +105,7 @@ h1 {
     display: block;
 }
 
-/*Strzałki*/
+/* Strzałki */
 #prev, #next {
     position: absolute;
     top: 20vw;
@@ -151,11 +127,8 @@ h1 {
 #next {
     right: 1vw;
 }
-#prev:hover, #next:hover {
-    
-}
 
-/* Style dla kropeczek */
+/* Kropeczki */
 #dots {
     position: absolute;
     top: 38vw;
@@ -220,7 +193,7 @@ h1 {
 }
 
 .team-gallery {
-	margin-top: 4vw;
+	margin-top: 2vw;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30vw, 1fr));
     gap: 1vw;
@@ -232,7 +205,7 @@ h1 {
     border-radius: 0.5vw;
     box-shadow: 0 0.2vw 0.5vw rgba(0, 0, 0, 0.5);
     text-align: center;
-    padding: 1vw;
+    padding: 1vw 0.5vw;
     transition: transform 0.3s, box-shadow 0.3s;
 }
 .team-member:hover {
@@ -269,6 +242,7 @@ h1 {
     text-align: center;
 }
 .article {
+    position: relative;
     background: #404040;
     border-radius: 0.5vw;
     box-shadow: 0 0.2vw 0.5vw rgba(0, 0, 0, 0.5);
@@ -289,13 +263,123 @@ body {
 }
 
 .content {
-    margin-top: 4vw;
+    margin-top: 2vw;
 	display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30vw, 1fr));
     gap: 1vw;
     padding: 1rem;
 }
-.article:hover{
+.article:hover {
 	transform: scale(1.02);
     box-shadow: 0 0.4vw 1vw rgba(0,0,0, 0.7);
+}
+
+.article .dane {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: left;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    padding-bottom: 2vw;
+}
+.article .dane .product-name {
+    color: #fff;
+    font-size: 1.5vw;
+    margin: 0 1vw;
+    text-align: left; 
+}
+.article .dane .product-price {
+    color: #d00b0e;
+    font-size: 1.2vw;
+    margin: 0.5vw 1vw 1vw 1vw;
+    text-align: left;
+}
+.article:hover .dane {
+    opacity: 1;
+}
+
+/* WYDARZENIA */
+.calendar-title {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 32px;
+    font-weight: bold;
+    color: #cc2900;
+    padding-top: 7vw;
+}
+.calendar-container {
+    max-width: 800px;
+    margin: 20px auto;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    padding: 20px;
+}
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+.event-item {
+    background-color: #333;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.event-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+.event-item:hover .overlay {
+    opacity: 1;
+}
+.event-date {
+    font-size: 18px;
+    color: #fff;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.event-details {
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 5px;
+}
+.event-location {
+    font-style: italic;
+    color: #cc2900;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: #000;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 10px;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+.overlay a {
+    color: #fff;
+    text-decoration: underline;
+    font-size: 14px;
 }
