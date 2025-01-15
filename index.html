@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="index.css">
     <script defer src="index.js"></script>
 </head>
-<body>
+<body class="index-page">
     <header id="header">
 		<nav id="logo">
             <a href="index.html"><img src="img/logo_szerokie.jpg" alt="Logo zespołu" style = "width:120%;"></a>
@@ -26,7 +26,7 @@
 			<li><a href="wydarzenia.html">WYDARZENIA</a></li>
 			<li><a href="#">ALBUMY</a></li>
 			<li><a href="sklep.html">SKLEP</a></li>
-			<li><a href="#">KONTAKT</a></li>
+			<li><a href="kontakt.html">KONTAKT</a></li>
 			<li><a href="https://www.kupbilecik.pl/" target="_blank">BILETY</a></li>
 
 		</ul>
@@ -35,7 +35,6 @@
     <nav id="slides">
         <a id="slide"><img src="img/slide/koncert_tlo1.jpg" style="width:100%; height: 40vw;"></a>
 		<a id="slide"><img src="img/slide/koncert_tlo2.jpg" style="width:100%; height: 40vw;"></a>
-		<a id="slide"><img src="img/slide/koncert_tlo3.jpg" style="width:100%; height: 40vw;"></a>
 		<a id="slide"><img src="img/slide/koncert_tlo4.jpg" style="width:100%; height: 40vw;"></a>
 		<a id="slide"><img src="img/slide/koncert_tlo5.jpg" style="width:100%; height: 40vw;"></a>
 		<!-- Strzałki -->
@@ -47,27 +46,27 @@
 			<span class="dot"></span>
 			<span class="dot"></span>
 			<span class="dot"></span>
-			<span class="dot"></span>
 		</div>
     </nav>
 
-	<h1>Aktualności</h1>
+	<h1>AKTUALNOŚCI</h1>
     <div class="content">
-        <div class="column">
-            <h2>Lorem Ipsum</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-            in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
-            sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        </div>
-        <div class="column">
-            <h2>Lorem Ipsum</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
-            labore et dolore magna aliqua. 
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-            in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
-            sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        </div>
+		<div class="column">
+			<h3>Występ na WOŚP w Krakowie!</h3>
+			<p class="text">W tamtym tygodniu mieliśmy przyjemność zagrać podczas finału Wielkiej Orkiestry Świątecznej Pomocy w Krakowie! Było niesamowicie, a energia publiczności na Rynku Głównym przeszła nasze oczekiwania. Dziękujemy wszystkim, którzy przyszli nas wesprzeć i wspólnie z nami pomogli zebrać fundusze na ten szczytny cel. Dla nas to ogromny zaszczyt móc brać udział w tym wydarzeniu, które jednoczy ludzi w szczytnym celu. Zawsze będziemy wspierać WOŚP i mam nadzieję, że za rok spotkamy się ponownie na scenie!</p>
+		</div>
+		<div class="column">
+			<h3>Nowy album już w drodze!</h3>
+			<p class="text">Pracujemy nad kolejnym albumem, który zabierze Was w jeszcze bardziej emocjonującą muzyczną podróż. Wkrótce zdradzimy więcej szczegółów, w tym tytuł oraz listę utworów. Śledźcie nasze profile społecznościowe, aby być na bieżąco z premierą! Nasz nowy materiał jest pełen niespodzianek – od bardziej intensywnych brzmień, po bardziej stonowane utwory, które z pewnością poruszą wasze serca. Jesteśmy bardzo podekscytowani tym, co przygotowaliśmy i nie możemy doczekać się, by podzielić się tym z wami!</p>
+		</div>
+		<div class="column">
+			<h3>Koncert w Katowicach – wielki sukces!</h3>
+			<p class="text">Katowice, byliście niesamowici! Wasze wsparcie i wspólne śpiewanie z nami na koncercie w Spodku to chwile, które na długo zapamiętamy. Dziękujemy za stworzenie wyjątkowej atmosfery – to dla Was robimy muzykę! Katowice to jedno z tych miejsc, które nigdy nie zawodzi – energia publiczności była elektryzująca! Cieszymy się, że mogliśmy wystąpić w tym niesamowitym mieście i zagrzać Was do wspólnego śpiewania. Z niecierpliwością czekamy na kolejne koncerty w Waszym regionie!</p>
+		</div>
+		<div class="column">
+			<h3>Nowe produkty w sklepie!</h3>
+			<p class="text">Nasze koszulki, bluzy i gadżety cieszą się ogromnym zainteresowaniem, dlatego dodaliśmy kilka nowych produktów! Odwiedźcie nasz sklep i sprawdźcie, co przygotowaliśmy. Z każdym zakupem wspieracie naszą twórczość. Dziękujemy! W naszej ofercie znajdziecie także limitowane edycje, które będą dostępne tylko przez krótki czas. Każdy produkt jest starannie wykonany z wysokiej jakości materiałów, a dochód z ich sprzedaży pomoże nam w dalszym rozwijaniu naszej muzycznej działalności. Zapraszamy do zakupów!</p>
+		</div>
     </div>
 
     <footer class="footer">
@@ -173,7 +172,11 @@
                 $("#slides").mouseleave(function() {
                     $("#prev, #next").fadeOut();
                 });
-
+		
+		// Funkcja rozwijania i zwijania tekstu
+		$(".column").click(function() {
+        	$(this).toggleClass("active"); 
+    	});
 	});
 
 	document.addEventListener("scroll", () => {

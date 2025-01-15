@@ -1,4 +1,4 @@
-/* STRONA GŁÓWNA i GLOBALNE */
+/* GLOBALNE */
 body {
 	margin: 0;
 	padding: 0;
@@ -30,7 +30,6 @@ h1 {
 	z-index: 1;
     text-align: center;
 }
-
 #logo {
 	position: absolute;
     top: 0;
@@ -40,7 +39,6 @@ h1 {
 #logo img {
 	height: 5vw;
 }
-
 #menu {
     display: absolute;
     margin-left: 30%;
@@ -93,7 +91,24 @@ h1 {
 	color: rgba(0,0,0, 0.7);
 	background-image: linear-gradient(to right, white, #d9d9d9, #bfbfbf, #a6a6a6, #8c8c8c, #737373, #595959, #404040); 
 }
+.footer {
+    text-align: center;
+    font-size: 1vw;
+    color: #fff;
+    margin-top: 2vw;
+	padding-bottom: 1vw;
+    position: relative;
+	background-color: #404040;
+	height: 5vw;
+}
+.footer-line {
+    width: 100%;
+    height: 0.2vw;
+    background-color: #000;
+    margin-bottom: 1vw;
+}
 
+/* STRONA GŁÓWNA */
 #slides .slide {
     position: relative;
 	display: none;
@@ -149,35 +164,62 @@ h1 {
     background-color: rgba(208, 11, 14, 1); /* Pełna czerwień dla aktywnej kropeczki */
 }
 
-.content {
-    display: flex;
-    padding: 2vw;
-    gap: 2vw;
-}
-.column {
-    flex: 1;
-	height: 20vw;
-    padding: 1vw;
-    background-color: #404040;
-    border: 0.2vw solid #000;
-	color: #fff;
-}
-
-.footer {
-    text-align: center;
-    font-size: 1vw;
-    color: #fff;
+/* Aktualności */
+body.index-page h1 {
     margin-top: 2vw;
-	padding-bottom: 1vw;
-    position: relative;
-	background-color: #404040;
-	height: 5vw;
 }
-.footer-line {
-    width: 100%;
-    height: 0.2vw;
-    background-color: #000;
-    margin-bottom: 1vw;
+body.index-page .content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1vw;
+    justify-content: center;
+    padding: 1rem;
+    cursor: pointer;
+}
+body.index-page .column {
+    position: relative;
+    padding: 1vw;
+    border-radius: 0.5vw;
+    transition: transform 0.3s ease-in-out;
+    overflow: hidden; 
+    max-height: 8vw; 
+}
+body.index-page .column:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0.4vw 1vw rgba(0, 0, 0, 0.7);
+	z-index: 0;
+}
+body.index-page .column h3 {
+    margin: 0;
+    color: #d00b0e;
+    font-size: 1.2rem;
+}
+body.index-page .column p {
+    font-size: 1.2vw;
+    line-height: 1.6;
+    color: #fff;
+}
+body.index-page .column a {
+    color: #d00b0e;
+    text-decoration: none;
+    font-weight: bold;
+}
+body.index-page .column a:hover {
+    text-decoration: underline;
+}
+body.index-page .column .text {
+    display: block;
+    overflow: hidden;
+    height: auto;
+}
+body.index-page .column.active {
+    max-height: 20vw;
+    transition: max-height 0.5s ease-in-out;
+}
+@media (max-width: 768px) {
+    body.index-page .content {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* EKIPA */
@@ -191,7 +233,6 @@ h1 {
 #logo_podstrona img {
 	height: 4.5vw;
 }
-
 .team-gallery {
 	margin-top: 2vw;
     display: grid;
@@ -261,7 +302,6 @@ body {
 	background-color: #000;
 	position: relative;
 }
-
 .content {
     margin-top: 2vw;
 	display: grid;
@@ -269,11 +309,18 @@ body {
     gap: 1vw;
     padding: 1rem;
 }
+.column {
+    flex: 1;
+	height: 20vw;
+    padding: 1vw;
+    background-color: #404040;
+    border: 0.2vw solid #000;
+	color: #fff;
+}
 .article:hover {
 	transform: scale(1.02);
     box-shadow: 0 0.4vw 1vw rgba(0,0,0, 0.7);
 }
-
 .article .dane {
     position: absolute;
     top: 0;
@@ -382,4 +429,47 @@ body {
     color: #fff;
     text-decoration: underline;
     font-size: 14px;
+}
+
+/* KONTAKT */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+    background-color: #404040;
+    padding: 0.7vw 1.5vw 1.5vw;
+    border-radius: 0.5vw;
+    box-shadow: 0 0.4vw 1vw rgba(0, 0, 0, 0.7);
+    color: #fff;
+    width: 60%;
+    margin: 0vw auto 2vw;
+}
+.contact-form label {
+    font-size: 1.4vw;
+    margin-top: 0.5vw;
+}
+.contact-form input, .contact-form select, .contact-form textarea {
+    font-size: 1.2vw;
+    padding: 0.5vw;
+    border: 0.1vw solid #000;
+    border-radius: 0.5vw;
+    background-color: #333;
+    color: #fff;
+}
+.contact-form textarea {
+    resize: vertical;
+}
+.contact-form button {
+    font-size: 1.5vw;
+    padding: 0.8vw;
+    background-color: #d00b0e;
+    color: #fff;
+    border: none;
+    border-radius: 0.5vw;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    padding: 0.8vw;
+}
+.contact-form button:hover {
+    background-color: #a6000b;
 }
