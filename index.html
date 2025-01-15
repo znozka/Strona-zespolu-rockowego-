@@ -10,25 +10,27 @@
 </head>
 <body>
     <header id="header">
-        <nav id="logo">
+		<nav id="logo">
             <a href="index.html"><img src="img/logo_szerokie.jpg" alt="Logo zespołu" style = "width:120%;"></a>
         </nav>
         
-        <nav id="menu">
-            <a id="wysun">O NAS</a>
-            <a href="wydarzenia.html">WYDARZENIA</a>
-            <a href="#">ALBUMY</a>
-            <a href="sklep.html">SKLEP</a>
-            <a href="#">KONTAKT</a>
-            <a href="https://www.kupbilecik.pl/" target="_blank">BILETY</a>
-        </nav>
-    </header>
+		<ul id="menu">
+			<li>
+				<a id="wysun">O NAS</a>
+				<ul>
+					<li><a href="#">HISTORIA</a></li>
+					<li><a href="ekipa.html">EKIPA</a></li>
+					<li><a href="#">GALERIA</a></li>
+				</ul>
+			</li>
+			<li><a href="wydarzenia.html">WYDARZENIA</a></li>
+			<li><a href="#">ALBUMY</a></li>
+			<li><a href="sklep.html">SKLEP</a></li>
+			<li><a href="#">KONTAKT</a></li>
+			<li><a href="https://www.kupbilecik.pl/" target="_blank">BILETY</a></li>
 
-    <nav id="mini">
-        <a href="#">HISTORIA ZESPOŁU</a>
-        <a href="ekipa.html">EKIPA</a>
-        <a href="#">GALERIA</a>
-    </nav>
+		</ul>
+    </header>
 
     <nav id="slides">
         <a id="slide"><img src="img/slide/koncert_tlo1.jpg" style="width:100%; height: 40vw;"></a>
@@ -77,19 +79,15 @@
     <script>
         $(document).ready(function() {
             let timeout; // Zmienna do zarządzania opóźnieniem
-    
-            // Gdy myszka wchodzi na "O NAS" lub "mini"
-            $("#menu a:contains('O NAS'), #mini").on('mouseenter', function() {
-                clearTimeout(timeout); // Anuluj ukrywanie
-                $('#mini').stop(true, true).slideDown(300); // Pokaż menu
-            });
-    
-            // Gdy myszka opuszcza "O NAS" lub "mini"
-            $("#menu a:contains('O NAS'), #mini").on('mouseleave', function() {
-                timeout = setTimeout(function() {
-                    $('#mini').stop(true, true).slideUp(300); // Ukryj menu po opóźnieniu
-                }, 300); // Czas opóźnienia (300 ms)
-            });
+			
+			$('#menu > li').hover(
+				function () {
+					$(this).find('ul').stop(true, true).slideDown(300);
+				},
+				function () {
+					$(this).find('ul').stop(true, true).slideUp(300);					
+				}
+           	 );
 
 			// SLAJDY, STRZAŁKI, KROPECZKI
 			let slides = $("#slides a");
@@ -167,27 +165,25 @@
 	
 			interval = setInterval(showNextSlide, 2000);
 
-			$(document).ready(function() {
-				let strzalki = $("#prev, #next");
-				strzalki.hide();
+			let strzalki = $("#prev, #next");
+			strzalki.hide();
                 $("#slides").mouseenter(function() {
                     $("#prev, #next").fadeIn();
                 });
                 $("#slides").mouseleave(function() {
                     $("#prev, #next").fadeOut();
                 });
-			});
-		});
-		
-		document.addEventListener("scroll", () => {
-			const menu = document.getElementById("header");
-			if (window.scrollY > 50) {
-				menu.style.backgroundColor = "rgba(0,0,0, 0.6)"; // Ciemne tło po przewinięciu
-			} else {
-				menu.style.backgroundColor = "rgba(0, 0, 0, 1)"; // Przezroczyste tło na górze
-			}
-		});
-		
+
+	});
+
+	document.addEventListener("scroll", () => {
+		const menu = document.getElementById("header");
+		if (window.scrollY > 50) {
+			menu.style.backgroundColor = "rgba(0,0,0, 0.6)"; // Ciemne tło po przewinięciu
+		} else {
+			menu.style.backgroundColor = "rgba(0, 0, 0, 1)"; // Przezroczyste tło na górze
+		}
+	});
     </script>
 </body>
 </html>
