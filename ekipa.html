@@ -15,9 +15,15 @@
             <a href="index.html"><img src="img/logo_szerokie.jpg" alt="Logo zespołu"></a>
         </nav>
         
-        <ul id="menu">
+        <div id="burger-menu" onclick="toggleMenu()">
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+        
+		<ul id="menu">
 			<li>
-				<a id="wysun">O NAS</a>
+				<a id="wysun" onclick="toggleSubmenu()">O NAS</a>
 				<ul>
 					<li><a href="historia.html">HISTORIA</a></li>
 					<li><a href="ekipa.html">EKIPA</a></li>

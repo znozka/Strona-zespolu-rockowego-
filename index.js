@@ -131,3 +131,12 @@ toggleText('toggleBtn2', 'text2', 'overlay2');
 toggleText('toggleBtn3', 'text3', 'overlay3');
 toggleText('toggleBtn4', 'text4', 'overlay4');
 
+/* WĄSKI EKRAN */
+function toggleMenu() {
+    const menu = document.getElementById('menu');
+    menu.classList.toggle('open');
+}
+function toggleSubmenu() {
+    const submenu = document.querySelector('.submenu');
+    submenu.classList.toggle('open');
+}

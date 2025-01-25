@@ -14,10 +14,16 @@
 		<nav id="logo">
             <a href="index.html"><img src="img/logo_szerokie.jpg" alt="Logo zespołu"></a>
         </nav>
+
+		<div id="burger-menu" onclick="toggleMenu()">
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
         
 		<ul id="menu">
 			<li>
-				<a id="wysun">O NAS</a>
+				<a id="wysun" onclick="toggleSubmenu()">O NAS</a>
 				<ul>
 					<li><a href="historia.html">HISTORIA</a></li>
 					<li><a href="ekipa.html">EKIPA</a></li>
@@ -29,7 +35,6 @@
 			<li><a href="sklep.html">SKLEP</a></li>
 			<li><a href="kontakt.html">KONTAKT</a></li>
 			<li><a href="https://www.kupbilecik.pl/" target="_blank">BILETY</a></li>
-
 		</ul>
     </header>
 
